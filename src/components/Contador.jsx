@@ -7,7 +7,7 @@ export const Contador = () => {
     const { count } = useSelector(counterSelector)
     const dispatch = useDispatch()
 
-    const styles = "container d-flex flex-column gap-2 w-25"
+    const styles = "container col-3 d-flex flex-column gap-2"
 
     return (
         <div className={ styles }>

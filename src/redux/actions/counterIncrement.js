@@ -1,3 +1,1 @@
-export const counterIncrement = (state) => {
-    state.count += 1
-}
+export const counterIncrement = state => { state.count++ }
