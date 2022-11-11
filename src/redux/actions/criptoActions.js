@@ -8,5 +8,4 @@ export const criptoGetPrice = (state, action) => {
     const { ars, usd } = action.payload.market_data.current_price;
     state.price = { ars, usd };
     state.loading = false;
-
 }

@@ -1,10 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { counterReducer, criptoReducer } from '../'
-// import { criptoReducer } from '../reducers/criptoReducer'
+import { counterReducer, criptoReducer, apiJPHolder } from '../'
 
 export const store = configureStore({
     reducer: {
         counter: counterReducer,
-        criptos: criptoReducer
+        criptos: criptoReducer,
+
+        [apiJPHolder.reducerPath]: apiJPHolder.reducer
     },
+
+    middleware: middleware => middleware().concat(apiJPHolder.middleware)
 })
